@@ -11,6 +11,6 @@
 
 ## 📰 News
 
-**[2022.9.15]** Exp-BLIP is decided by **BMVC 2023** as a **Oral** presentation! 🎉 <br>
-**[2022.8.25]** Exp-BLIP is accepted by **BMVC 2023** ! 🎉 <br>
+**[2023.9.12]** Exp-BLIP is decided by **BMVC 2023** as a **Oral** presentation! 🎉 <br>
+**[2023.8.25]** Exp-BLIP is accepted by **BMVC 2023** ! 🎉 <br>
 **[2023.8.20]** Code and trained models will be released here. Welcome to **watch** this repository for the latest updates.
