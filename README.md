@@ -1,6 +1,6 @@
 # Official PyTorch Implementation of Exp-BLIP (BMVC 2023 Oral).
 
-![Exp-BLIP training Framework](figs/overview.pdf)
+![Exp-BLIP training Framework](figs/overview.jpg)
 
 
 > [**Describe Your Facial Expressions by Linking Image Encoders and Large Language Models**]<br>
