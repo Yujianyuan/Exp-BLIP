@@ -54,3 +54,6 @@ Statistics of training and test data. The captions of each image can be download
 | AU-BLIP(ViT-G,OPT6.7B)    			|     [Google Drive]|
 | Emot-BLIP(ViT-G,OPT6.7B)             |     [Google Drive]    |
 | Exp-BLIP(ViT-G,OPT6.7B)              |     [Google Drive]    | 
+
+## 🤝 Acknowledgement
+This work is supported by National Natural Science Foundation of China (No. 62176248). We also thank ICT computing platform for providing GPUs. We thank salesforce sharing the code of BLIP-2 via [LAVIS](https://github.com/salesforce/LAVIS). Our codes are based on LAVIS.
