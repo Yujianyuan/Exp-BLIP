@@ -36,7 +36,7 @@ Statistics of training and test data. The captions of each image can be download
 ## ⬇️ Captions and Models Download
 
 
-### <div id="custom-id">(1) Sythesized captions
+### <div id="custom-id">(1) Sythesized captions</div>
 | Caption type                         |                                                    Link                                                    |
 |:------------------------------------|:-------------------------------------------------------------------------------------------------------:| 
 | AU captions    					   |     [Google Drive](https://drive.google.com/drive/folders/13I0nCB0t5-FcKnQ48xOPVno_Eerb83Uj?usp=sharing)|
