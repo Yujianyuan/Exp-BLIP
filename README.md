@@ -21,8 +21,16 @@
 
 <a name="text"></a>
 ### (1) Sythesized captions
-| Captions type                         |                                                    Link                                                    |
+| Caption type                         |                                                    Link                                                    |
 |:------------------------------------|:-------------------------------------------------------------------------------------------------------:| 
 | AU captions    					   |     [Google Drive](https://drive.google.com/drive/folders/13I0nCB0t5-FcKnQ48xOPVno_Eerb83Uj?usp=sharing)|
 | Emotion captions                    |     [Google Drive]    |
 | Facial expression captions          |     [Google Drive]    | 
+
+<a name="text"></a>
+### (2) Trained models
+| Model                         |                                                    Link                                                    |
+|:------------------------------------|:-------------------------------------------------------------------------------------------------------:| 
+| AU-BLIP(ViT-G,OPT6.7B)    			|     [Google Drive]|
+| Emot-BLIP(ViT-G,OPT6.7B)             |     [Google Drive]    |
+| Exp-BLIP(ViT-G,OPT6.7B)              |     [Google Drive]    | 
