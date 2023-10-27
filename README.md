@@ -15,12 +15,28 @@
 **[2023.8.25]** Exp-BLIP is accepted by **BMVC 2023** ! 🎉 <br>
 **[2023.8.20]** Code and trained models will be released here. Welcome to **watch** this repository for the latest updates.
 
+## ➡️ Datasets
+Statistics of training and test data. The captions of each image can be downloaded in [Sythesized captions](#custom-id) part.
 
-<a name="download"></a>
-## ➡️ Captions and Models Download
+### (1) AU datasets
+|                        |    BP4D   |  DISFA    |   GFT     |  RAF-AU    | Emotionet |
+|:-----------------------|:---------:|:---------:|:---------:|:---------:|:---------:| 
+| Train(#image/#sub)   	  | 16627*/28 |14814*/24  |17719*/78  |  3733/-    |19046/-   |
+| Test(#image/#sub)      | 45805/13  |14535/3    |4034*/18   |  868/-     |2117/-    |
 
-<a name="text"></a>
-### (1) Sythesized captions
+*:sampled sets
+  
+### (2) Emotion datasets
+|                        |    AffectNet   |  RAF-DB |   FaceME   | 
+|:-----------------------|:---------:|:---------:|:---------:| 
+| Train(#image/#sub)   	  | 287618/-  |  3162/-   |10052/- |
+| Test(#image/#sub)      | 4000/-    |		792/-  | - |
+
+
+## ⬇️ Captions and Models Download
+
+
+### <div id="custom-id">(1) Sythesized captions
 | Caption type                         |                                                    Link                                                    |
 |:------------------------------------|:-------------------------------------------------------------------------------------------------------:| 
 | AU captions    					   |     [Google Drive](https://drive.google.com/drive/folders/13I0nCB0t5-FcKnQ48xOPVno_Eerb83Uj?usp=sharing)|
