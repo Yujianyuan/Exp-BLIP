@@ -14,3 +14,15 @@
 **[2023.9.12]** Exp-BLIP is decided by **BMVC 2023** as a **Oral** presentation! 🎉 <br>
 **[2023.8.25]** Exp-BLIP is accepted by **BMVC 2023** ! 🎉 <br>
 **[2023.8.20]** Code and trained models will be released here. Welcome to **watch** this repository for the latest updates.
+
+
+<a name="download"></a>
+## ➡️ Captions and Models Download
+
+<a name="text"></a>
+### (1) Sythesized captions
+| Captions type                         |                                                    Link                                                    |
+|:------------------------------------|:-------------------------------------------------------------------------------------------------------:| 
+| AU captions    					   |     [Google Drive](https://drive.google.com/drive/folders/13I0nCB0t5-FcKnQ48xOPVno_Eerb83Uj?usp=sharing)|
+| Emotion captions                    |     [Google Drive]    |
+| Facial expression captions          |     [Google Drive]    | 
