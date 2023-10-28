@@ -51,9 +51,9 @@ Statistics of training and test data. The captions of each image can be download
 ### (2) Trained models
 | Model                         |                                                    Link                                                    |
 |:------------------------------------|:-------------------------------------------------------------------------------------------------------:| 
-| AU-BLIP(ViT-G,OPT6.7B)    			|     [OneDrive]|
+| AU-BLIP(ViT-G,OPT6.7B)    			|     [OneDrive](https://1drv.ms/u/s!Atl7YPj4ORSRjfAxeMouMlluoe9jcg?e=cM3hhd)|
 | Emot-BLIP(ViT-G,OPT6.7B)             |     [OneDrive]    |
-| Exp-BLIP(ViT-G,OPT6.7B)              |     [OneDrive]    | 
+| Exp-BLIP(ViT-G,OPT6.7B)              |     [OneDrive](https://1drv.ms/u/s!Atl7YPj4ORSRjfAyMrLW_IEY9fCabw?e=qxEVgb)    | 
 
 
 ## 🤝 Acknowledgement
