@@ -78,11 +78,55 @@ Note: Please **Not** use pip to install salesforce-lavis
 
 4. move test.py to the folder LAVIS.
 
-```javascript
+```yaml
 # Folder structure
 -LAVIS
    --lavis
    --test.py
+```
+
+## 🚀 Getting started
+
+1. <div id="step1">finish blip2_caption_opt6.7b.yaml by adding the model path to the corresponding part.</div>
+
+```yaml
+# TODO 1: path to your AU/Emot/Exp-BLIP model
+  # eg: finetuned: ".../exp_blip_vitg_opt6.7b_trimmed.pth"
+  finetuned: "{PATH TO MODEL}"
+
+  # TODO 2(optional): path to opt-6.7b model
+  opt_model: "facebook/opt-6.7b"
+```
+
+2. replace LAVIS/lavis/configs/models/blip2/blip2_caption_opt6.7b.yaml with our blip2_caption_opt6.7b.yaml(in [step1](#step1))
+
+3. in test.py, finish the image path
+```python
+import torch
+from PIL import Image
+from lavis.models import load_model_and_preprocess
+
+# load sample image
+raw_image = Image.open("figs/happy.png").convert("RGB")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# set max output length
+max_len = 200 
+# loads AU/Emot/Exp-BLIP model
+# this also loads the associated image processors
+model, vis_processors, _ = load_model_and_preprocess(name="blip2_opt",
+                model_type="caption_coco_opt6.7b", is_eval=True, device=device)
+# preprocess the image
+# vis_processors stores image transforms for "train" and "eval" 
+image = vis_processors["eval"](raw_image).unsqueeze(0).to(device)
+# generate caption
+print('[1 caption]:',model.generate({"image": image},max_length=max_len))
+# ['']
+# use nucleus sampling for diverse outputs 
+print('[3 captions]:',model.generate({"image": image}, use_nucleus_sampling=True, num_captions=3,max_length=max_len))
+```
+Then run it, you can get the captions.
+```bash
+python test.py
 ```
 
 ## 🤝 Acknowledgement
