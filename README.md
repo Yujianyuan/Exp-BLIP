@@ -55,6 +55,35 @@ Statistics of training and test data. The captions of each image can be download
 | Emot-BLIP(ViT-G,OPT6.7B)             |     [OneDrive]    |
 | Exp-BLIP(ViT-G,OPT6.7B)              |     [OneDrive](https://1drv.ms/u/s!Atl7YPj4ORSRjfAyMrLW_IEY9fCabw?e=qxEVgb)    | 
 
+## 🔨 Installation
+
+1. (Optional) Creating conda environment
+
+```bash
+conda create -n expblip python=3.8.12
+conda activate expblip
+```
+
+2. Download the packages in expblip_requirements.txt 
+```bash
+pip install -r expblip_requirements.txt
+```
+
+3. Download the library [LAVIS](https://github.com/salesforce/LAVIS). 
+```bash
+git clone https://github.com/salesforce/LAVIS.git
+cd LAVIS
+```
+Note: Please **Not** use pip to install salesforce-lavis
+
+4. move test.py to the folder LAVIS.
+
+```javascript
+# Folder structure
+-LAVIS
+   --lavis
+   --test.py
+```
 
 ## 🤝 Acknowledgement
 This work is supported by National Natural Science Foundation of China (No. 62176248). We also thank ICT computing platform for providing GPUs. We thank salesforce sharing the code of BLIP-2 via [LAVIS](https://github.com/salesforce/LAVIS). Our codes are based on LAVIS.
