@@ -74,7 +74,7 @@ pip install -r expblip_requirements.txt
 git clone https://github.com/salesforce/LAVIS.git
 cd LAVIS
 ```
-Note: Please **Not** use pip to install salesforce-lavis
+Note: Please do **Not** install salesforce-lavis
 
 4. move test.py to the folder LAVIS.
 
