@@ -11,6 +11,7 @@
 
 ## 📰 News
 
+**[2023.11.6]** Paper of Exp-BLIP are [available](https://github.com/Yujianyuan/Exp-BLIP/tree/main/paper). <br>
 **[2023.10.27]** Sythesized captions used for training are [available](#custom-id). <br>
 **[2023.9.12]** Exp-BLIP is decided by **BMVC 2023** as an **Oral** presentation! 🎉 <br>
 **[2023.8.25]** Exp-BLIP is accepted by **BMVC 2023** ! 🎉 <br>
@@ -127,6 +128,18 @@ print('[3 captions]:',model.generate({"image": image}, use_nucleus_sampling=True
 Then run it, you can get the captions.
 ```bash
 python test.py
+```
+
+## ✏️ Citation
+If you find this work useful for your research, please feel free to leave a star⭐️ and cite our paper:
+
+```bibtex
+@inproceedings{yuan2022describe,
+  title={Describe Your Facial Expressions by Linking Image Encoders and Large Language Models},
+  author={Yuan, Yujian and Zeng, Jiabei and Shan, Shiguang},
+  booktitle={British Machine Vision Conference (BMVC)},
+  year={2023}
+}
 ```
 
 ## 🤝 Acknowledgement
