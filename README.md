@@ -134,7 +134,7 @@ python test.py
 If you find this work useful for your research, please feel free to leave a star⭐️ and cite our paper:
 
 ```bibtex
-@inproceedings{yuan2022describe,
+@inproceedings{yuan2023describe,
   title={Describe Your Facial Expressions by Linking Image Encoders and Large Language Models},
   author={Yuan, Yujian and Zeng, Jiabei and Shan, Shiguang},
   booktitle={British Machine Vision Conference (BMVC)},
