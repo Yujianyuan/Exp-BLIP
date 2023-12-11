@@ -1,0 +1,23 @@
+ # Copyright (c) 2022, salesforce.com, inc.
+ # All rights reserved.
+ # SPDX-License-Identifier: BSD-3-Clause
+ # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+datasets:
+  audata_pretrain: # name of the dataset builder
+    # data_dir: ${env.data_dir}/datasets
+    data_type: images # [images|videos|features]
+    #image_size: 256
+
+    build_info:
+      # Be careful not to append minus sign (-) before split to avoid itemizing
+      # v0
+      annotations:
+        train:
+          storage: /home/yuanyujian/large_model/blipv2/data_process/raf_train_v1.json
+        #val:
+        #  storage: /home/yuanyujian/large_model/blipv2/data_process/raf1_audata_train_dict.json
+        #test:
+        #  storage: /home/yuanyujian/large_model/blipv2/data_process/raf1_audata_train_dict.json
+      images:
+        storage: /home/yuanyujian/data
