@@ -11,7 +11,9 @@
 
 ## 📰 News
 
-**[2023.11.6]** Paper of Exp-BLIP are [available](https://github.com/Yujianyuan/Exp-BLIP/tree/main/paper). <br>
+**[2023.12.11]** Training and test codes of Exp-BLIP are available. <br>
+**[2023.11.24]** Video presentation of Exp-BLIP is available in [BMVC2023](https://bmvc2022.mpi-inf.mpg.de/BMVC2023/0377_video.mp4). <br>
+**[2023.11.6]** Paper of Exp-BLIP are available([BMVC2023](https://papers.bmvc2023.org/0377.pdf), [GitHub](https://github.com/Yujianyuan/Exp-BLIP/tree/main/paper)). <br>
 **[2023.10.27]** Sythesized captions used for training are [available](#custom-id). <br>
 **[2023.9.12]** Exp-BLIP is decided by **BMVC 2023** as an **Oral** presentation! 🎉 <br>
 **[2023.8.25]** Exp-BLIP is accepted by **BMVC 2023** ! 🎉 <br>
@@ -65,47 +67,44 @@ conda create -n expblip python=3.8.12
 conda activate expblip
 ```
 
-2. Download the packages in expblip_requirements.txt 
+2. Download the packages in requirements.txt 
+
 ```bash
-pip install -r expblip_requirements.txt
+pip install -r requirements.txt 
 ```
 
-3. Download the library [LAVIS](https://github.com/salesforce/LAVIS). 
+3. Download this repo. 
 ```bash
-git clone https://github.com/salesforce/LAVIS.git
-cd LAVIS
-```
-Note: Please do **Not** install salesforce-lavis
-
-4. move test.py to the folder LAVIS.
-
-```yaml
-# Folder structure
--LAVIS
-   --lavis
-   --test.py
+git clone https://github.com/Yujianyuan/Exp-BLIP.git
+cd Exp-BLIP
 ```
 
 ## 🚀 Getting started
 
-1. <div id="step1">finish blip2_caption_opt6.7b.yaml by adding the model path to the corresponding part.</div>
+### (1) Training
 
-```yaml
-# TODO 1: path to your AU/Emot/Exp-BLIP model
-  # eg: finetuned: ".../exp_blip_vitg_opt6.7b_trimmed.pth"
-  finetuned: "{PATH TO MODEL}"
+You should finish the two training steps sequentially for training.
 
-  # TODO 2(optional): path to opt-6.7b model
-  opt_model: "facebook/opt-6.7b"
+1. fill the blank labeled by 'TODO' in Exp-BLIP/mylavis/projects/blip2/train/pretrain_stage1_vitg.yaml
+
+2. training for step-1
+```bash
+python -m torch.distributed.run --nproc_per_node=4 train.py --cfg-path mylavis/projects/blip2/train/pretrain_stage1_vitg.yaml
 ```
 
-2. replace LAVIS/lavis/configs/models/blip2/blip2_caption_opt6.7b.yaml with our blip2_caption_opt6.7b.yaml(in [step1](#step1))
+3. fill the blank labeled by 'TODO' in Exp-BLIP/mylavis/projects/blip2/train/caption_exp_ft.yaml
 
-3. in test.py, finish the image path
+4. training for step-2
+```bash
+python -m torch.distributed.run --nproc_per_node=4 train.py --cfg-path mylavis/projects/blip2/train/caption_exp_ft.yaml
+```
+### (2) Test
+
+1. in test.py, finish the image path and model path
 ```python
 import torch
 from PIL import Image
-from lavis.models import load_model_and_preprocess
+from mylavis.models import my_load_model_and_preprocess
 
 # load sample image
 raw_image = Image.open("figs/happy.png").convert("RGB")
@@ -114,14 +113,15 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 max_len = 200 
 # loads AU/Emot/Exp-BLIP model
 # this also loads the associated image processors
-model, vis_processors, _ = load_model_and_preprocess(name="blip2_opt",
-                model_type="caption_coco_opt6.7b", is_eval=True, device=device)
+checkpoint_path = './exp_blip_vitg_opt6.7b_trimmed.pth'
+model, vis_processors, _ = my_load_model_and_preprocess(name="blip2_opt",
+                model_type="caption_coco_opt6.7b", dict_path = dict_path, is_eval=True, device=device)
 # preprocess the image
 # vis_processors stores image transforms for "train" and "eval" 
 image = vis_processors["eval"](raw_image).unsqueeze(0).to(device)
 # generate caption
 print('[1 caption]:',model.generate({"image": image},max_length=max_len))
-# ['']
+
 # use nucleus sampling for diverse outputs 
 print('[3 captions]:',model.generate({"image": image}, use_nucleus_sampling=True, num_captions=3,max_length=max_len))
 ```
@@ -129,6 +129,8 @@ Then run it, you can get the captions.
 ```bash
 python test.py
 ```
+
+
 
 ## ✏️ Citation
 If you find this work useful for your research, please feel free to leave a star⭐️ and cite our paper:
@@ -143,4 +145,4 @@ If you find this work useful for your research, please feel free to leave a star
 ```
 
 ## 🤝 Acknowledgement
-This work is supported by National Natural Science Foundation of China (No. 62176248). We also thank ICT computing platform for providing GPUs. We thank salesforce sharing the code of BLIP-2 via [LAVIS](https://github.com/salesforce/LAVIS). Our codes are based on LAVIS.
+This work is supported by National Natural Science Foundation of China (No. 62176248). We also thank ICT computing platform for providing GPUs. We thank Salesforce Research sharing the code of BLIP-2 via [LAVIS](https://github.com/salesforce/LAVIS). Our codes are based on LAVIS.
