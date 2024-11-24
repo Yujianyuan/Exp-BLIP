@@ -107,7 +107,7 @@ from PIL import Image
 from mylavis.models import my_load_model_and_preprocess
 
 # load sample image
-raw_image = Image.open("figs/happy.png").convert("RGB")
+raw_image = Image.open("figs/happy.jpg").convert("RGB")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # set max output length
 max_len = 200 
