@@ -11,7 +11,7 @@ max_len = 200
 # this also loads the associated image processors
 checkpoint_path = './exp_blip_vitg_opt6.7b_trimmed.pth'
 model, vis_processors, _ = my_load_model_and_preprocess(name="blip2_opt",
-                model_type="caption_coco_opt6.7b", dict_path = dict_path, is_eval=True, device=device)
+                model_type="caption_coco_opt6.7b", dict_path = checkpoint_path, is_eval=True, device=device)
 # preprocess the image
 # vis_processors stores image transforms for "train" and "eval" 
 image = vis_processors["eval"](raw_image).unsqueeze(0).to(device)
