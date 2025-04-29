@@ -11,6 +11,7 @@
 
 ## 📰 News
 
+**[2025.4.29]** The extension of Exp-BLIP is accepted by **Pattern Recognition 2025**  🎉, please see [Exp-VQA](https://github.com/Yujianyuan/Exp-VQA).<br> 
 **[2023.12.11]** Training and test codes of Exp-BLIP are available. <br>
 **[2023.11.24]** Video presentation of Exp-BLIP is available in [BMVC2023](https://bmvc2022.mpi-inf.mpg.de/BMVC2023/0377_video.mp4). <br>
 **[2023.11.6]** Paper of Exp-BLIP are available([BMVC2023](https://papers.bmvc2023.org/0377.pdf), [GitHub](https://github.com/Yujianyuan/Exp-BLIP/tree/main/paper)). <br>
